@@ -1,6 +1,7 @@
 from tkinter import *
 
 
+# top level description window for candidate 1
 def description1():
     top1 = Toplevel()
     top1.title("Brad's Description")
@@ -15,6 +16,7 @@ def description1():
     description_text.pack()
 
 
+# top level description window for candidate 2
 def description2():
     top2 = Toplevel()
     top2.title("Charlie's Description")
@@ -29,6 +31,7 @@ def description2():
     description_text.pack()
 
 
+# top level description window for candidate 3
 def description3():
     top3 = Toplevel()
     top3.title("Cindy's Description")
