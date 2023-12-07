@@ -37,9 +37,9 @@ def description3():
     description = Label(top3, text='CINDY')
     description.pack(side='top')
 
-    description_text = Label(top3, text=f'\n \nBrad is a known cat lover who always strives to put \n'
-                                        'forward the best foot when it come to animal rights and \n '
-                                        'preventing cruel treatment')
+    description_text = Label(top3, text=f'\n \nCindy is a known woman around the community. If there \n'
+                                        'is an event benefiting the community she is right there \n '
+                                        'helping to make the event a success')
     description_text.pack()
 
 
