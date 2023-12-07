@@ -51,7 +51,7 @@ class Gui:
         self.tally_button.pack(side='left',pady=5)
         self.buttons_frame.pack()
 
-        # frame fro text to confirm that vote was successful/if errors were encountered
+        # frame for text to confirm that vote was successful/if errors were encountered
         self.text_frame = Frame(self.voting_window)
         self.text = Label(self.text_frame, text="")
         self.text.pack(side='bottom', pady=15)
@@ -72,14 +72,14 @@ class Gui:
         elif variable == 0:
             self.text.config(text="Please Select a Candidate")
 
-    clears all radio buttons and winner text
+    # clears all radio buttons and winner text
     def clear(self):
         self.var.set(0)
         winner = ''
         self.text.config(text='')
 
-    #counts the number of votes recieved by each candidate to determine whether a winner was found, a tie occurred, 
-    #or there were no votes at all
+    # counts the number of votes received by each candidate to determine whether a winner was found, a tie occurred, 
+    # or there were no votes at all
     def tally(self):
         count = len(self.votes)
         brad_count = self.votes.count("Brad")
@@ -126,7 +126,7 @@ class Gui:
         new_el_frame.pack()
         new_election_but.pack(side='bottom')
 
-    # function that clears all radio buttons, destorys the tally window, and empties the votes list and all necesssary labels
+    # function that clears all radio buttons, destroys the tally window, and empties the votes list and all necessary labels
     def new_election(self):
         self.votes.clear()
         self.var.set(0)
