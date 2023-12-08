@@ -44,7 +44,3 @@ def description3():
                                         'is an event benefiting the community she is right there \n '
                                         'helping to make the event a success')
     description_text.pack()
-
-
-
-
