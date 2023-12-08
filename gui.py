@@ -1,5 +1,3 @@
-
-import tkinter
 from tkinter import *
 import logic
 
@@ -46,9 +44,9 @@ class Gui:
         self.submit = Button(self.buttons_frame, text='Submit', command=self.submit)
         self.clear = Button(self.buttons_frame, text='Clear', command=self.clear)
         self.tally_button = Button(self.buttons_frame, text='Tally', command=self.tally)
-        self.submit.pack(side='left',pady=5)
-        self.clear.pack(side='left',padx=15, pady=5)
-        self.tally_button.pack(side='left',pady=5)
+        self.submit.pack(side='left', pady=5)
+        self.clear.pack(side='left', padx=15, pady=5)
+        self.tally_button.pack(side='left', pady=5)
         self.buttons_frame.pack()
 
         # frame for text to confirm that vote was successful/if errors were encountered
@@ -78,9 +76,10 @@ class Gui:
         winner = ''
         self.text.config(text='')
 
-    # counts the number of votes received by each candidate to determine whether a winner was found, a tie occurred, 
+    # counts the number of votes received by each candidate to determine whether a winner was found, a tie occurred,
     # or there were no votes at all
     def tally(self):
+        self.text.config(text='')
         count = len(self.votes)
         brad_count = self.votes.count("Brad")
         charlie_count = self.votes.count("Charlie")
@@ -97,7 +96,7 @@ class Gui:
         elif count == 0:
             winner = "\n There are no votes\n \n \n"
         elif brad_count == charlie_count and brad_count == cindy_count:
-             winner = "\nIt's a three way tie!!\n \n \n"
+            winner = "\nIt's a three way tie!!\n \n \n"
         elif brad_count == cindy_count:
             winner = "\nIt's a tie between Brad and Cindy!!\n \n \n"
         elif brad_count == charlie_count:
@@ -115,7 +114,7 @@ class Gui:
         results = Label(self.top4, text='Results')
         results.pack(side='top')
 
-        #label for the winner text
+        # label for the winner text
         results_text = Label(self.top4, text=str(winner))
         results_text.pack()
 
@@ -126,7 +125,8 @@ class Gui:
         new_el_frame.pack()
         new_election_but.pack(side='bottom')
 
-    # function that clears all radio buttons, destroys the tally window, and empties the votes list and all necessary labels
+    # function that clears all radio buttons, destroys the tally window, and empties the
+    # votes list and all necessary labels
     def new_election(self):
         self.votes.clear()
         self.var.set(0)
